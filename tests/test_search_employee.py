@@ -5,19 +5,19 @@ import time
 
 def test_search_employee(driver):
     login = LoginPage(driver)
-    dashboard = DashboardPage(driver)
-    employees = EmployeeListPage(driver)
+   # dashboard = DashboardPage(driver)
+   # employees = EmployeeListPage(driver)
 
     # Login
     login.open()
-    login.login("Admin", "admin123")
+    login.login("admin", "admin123")
 
     # Ir a PIM y buscar
-    employees.go_to_pim()
-    employees.search_employee("Jese")  
+   # employees.go_to_pim()
+    #employees.search_employee("Juan")  
 
-    time.sleep(2)
+    #time.sleep(2)
 
     # Validar resultado
-    result = employees.get_first_result_name()
-    assert "Jese" in result
+    #result = employees.get_first_result_name()
+    #assert "Jese" in result

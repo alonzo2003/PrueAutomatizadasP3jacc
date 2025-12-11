@@ -6,14 +6,14 @@ class LoginPage:
 
     USERNAME_INPUT = (By.NAME, "username")
     PASSWORD_INPUT = (By.NAME, "password")
-    LOGIN_BUTTON = (By.XPATH, "//button[@type='submit']")
+    LOGIN_BUTTON = (By.XPATH, "/html/body/div/form/button")
 
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)  # espera de 10 segundos
 
     def open(self):
-        self.driver.get("https://opensource-demo.orangehrmlive.com")
+        self.driver.get("http://127.0.0.1:5000/login")
 
     def enter_username(self, username):
         self.wait.until(EC.visibility_of_element_located(self.USERNAME_INPUT)).send_keys(username)

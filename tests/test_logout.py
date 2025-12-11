@@ -8,7 +8,7 @@ def test_logout(driver):
 
     # Login
     login.open()
-    login.login("Admin", "admin123")
+    login.login("admin", "admin123")
 
     # Logout
     dashboard.logout()
